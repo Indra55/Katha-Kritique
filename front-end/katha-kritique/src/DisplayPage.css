@@ -1,0 +1,107 @@
+.display-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #d4be99;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-family: 'Lora', serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.book-cover {
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.book-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.book-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.book-review {
+    font-size: 32px;
+    line-height: 2;
+    padding: 20px;
+    max-height: 400px; /* Example max height */
+    overflow-y: auto; /* Enable vertical scrollbar */
+
+    /* Styling the scrollbar */
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: #ccc #f0f0f0; /* Color of the scrollbar (track and thumb) */
+
+    /* Optional: Specific styling for WebKit browsers (like Chrome/Safari) */
+    scrollbar-track-color: #f0f0f0; /* Track color */
+    
+}
+
+/* For Firefox */
+.book-review::-webkit-scrollbar {
+    width: 10px;
+}
+
+.book-review::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Track color */
+}
+
+.book-review::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Thumb color */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+/* For Edge and IE */
+.book-review {
+    -ms-overflow-style: none; /* Hide the scrollbar in Edge and IE */
+}
+
+.book-review::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit (Chrome/Safari) */
+}
+
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+}
+
+.buttond {
+    margin-right: 20px;
+    padding: 16px 32px;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.buttond:hover {
+    background-color: grey;
+}
+
+.buttond:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

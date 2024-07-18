@@ -1,0 +1,73 @@
+/* App.css */
+
+:root {
+  --button-bg:  #EFE5D2; /* Button background color */
+  --button-text-color: #000000; /* Button text color */
+  --button-shadow: rgba(0, 0, 0, 0.2); /* Button shadow color */
+}
+
+.body {
+  background-image: url(assets/images/homepage.png);
+  background-color: #FFFDEB;
+  background-size: cover;
+  background-position: center top; /* Adjusted to align to the top */
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc(96.81vh - 80px); /* Adjusted to fit the viewport minus header height */
+  font-family: "Lora", serif;
+  overflow: hidden;
+  
+   /* Ensure no scrollbar appears */
+}
+
+
+
+
+#homepage-desc {
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+  color: black; /* This will be overridden by the gradient */
+  font-size: 38px;
+  max-width: 800px;
+  padding: 20px;
+  background: linear-gradient(90deg, #d2b48c, #a0522d, #8b4513); /* Darker beige gradient */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+}
+#start {
+  display: inline-block;
+  padding: 15px 40px;
+  background: radial-gradient(circle, #f5e4cf, #dac1a3, #d2b48c); /* Lighter radial gradient */
+  background-color: var(--button-bg); /* Fallback background color */
+  color: var(--button-text-color);
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px var(--button-shadow); /* Simulated shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#start:hover {
+  transform: translateY(2px); /* Add slight lift effect on hover */
+  box-shadow: 0px 15px 30px var(--button-shadow); /* Increase shadow on hover */
+}

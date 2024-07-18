@@ -1,0 +1,21 @@
+.quotes-container {
+    font-family: "Lora", serif;
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Set a width less than 100% to ensure it doesn't touch screen edges */
+    margin: 50px auto; /* Center the container horizontally and add top margin */
+    padding: 20px; /* Add padding to give space around the quotes */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    border: 1px solid transparent; /* Optional: Add a border for better visualization */
+}
+
+.quote {
+    position: relative;
+    display: block; /* Ensure the quote is a block element */
+    white-space: normal; /* Allow the text to wrap normally */
+    font-size: 28px; /* Adjust font size as needed */
+    font-weight: normal; /* Ensure text is not bold */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    text-align: center; /* Center align text */
+    padding: 10px; /* Add padding to prevent text from touching edges */
+}

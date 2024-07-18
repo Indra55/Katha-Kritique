@@ -1,0 +1,55 @@
+/* Menu.css */
+
+.hamburger-menu {
+    position: fixed; /* Fixes the element relative to the viewport */
+    top: 20px; /* Distance from the top of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    background-image: url(../assets/images/menu1.png); /* Background image for the menu */
+    border-radius: 50%;
+    background-size: cover; /* Ensure the background image covers the element */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+.menu-container {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+}
+
+
+.overlay-menu {
+    position: absolute;
+    top: 40px; /* Adjust as needed to position it below the hamburger menu */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.overlay-menu ul {
+    background-color: #fff;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay-menu ul li {
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.overlay-menu ul li a {
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.overlay-menu ul li a:hover {
+    text-decoration: underline;
+}

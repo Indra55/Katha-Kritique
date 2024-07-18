@@ -1,0 +1,26 @@
+/* Header.css */
+
+header {
+    background-color: #FFFDEB;
+    overflow: hidden;
+    padding: 20px 0; /* Add padding to give space around the content */
+}
+
+nav {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-link {
+    font-family: "Josefin Slab", serif;
+    font-weight: 500;
+    color: #D4BE99;
+    font-size: 75px; /* Maintain the original font size */
+    text-decoration: none;
+   
+}
+
+.header-link:hover {
+    text-decoration: underline;
+}

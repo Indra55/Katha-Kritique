@@ -1,0 +1,156 @@
+.words {
+    font-family: "Lora", serif;
+    font-weight: 100;
+    font-style: normal;
+    opacity: 0.9; /* Adjust opacity for visibility */
+    color: #333;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /*=============== VARIABLES CSS ===============*/
+  :root {
+    /*========== Colors ==========*/
+    --first-color: #000; /* Black */
+    --second-color: #333; /* Dark gray */
+    --third-color: #666; /* Medium gray */
+    --fourth-color: #999; /* Light gray */
+    --button-color: linear-gradient(80deg, #000, #fff); /* Black to white gradient */
+    --text-color: #fff; /* White text */
+    --body-color: hsl(260, 24%, 6%);
+    
+    /*========== Font and typography ==========*/
+    --body-font: "Poppins", sans-serif;
+    --normal-font-size: 1rem;
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /*=============== BUTTON ===============*/
+  .container {
+    display: inline-block; /* Ensures buttons are in a row */
+    margin: 0 10px; /* Adjust spacing between buttons */
+  }
+  
+  .button {
+    position: relative;
+  }
+  
+  .button__content {
+    position: relative;
+    background: var(--button-color); /* Black to white gradient */
+    padding: 20px 40px; /* Fixed padding for larger buttons */
+    border-radius: 4rem;
+    color: var(--text-color);
+    font-weight: 600;
+    overflow: hidden;
+  }
+  
+  .button__text {
+    position: relative;
+    z-index: 10;
+    font-size: 40px;
+    background: transparent;
+    font-family: "Lora", serif;
+    font-weight: 100;
+    font-style: normal;
+    opacity: 0.9; /* Adjust opacity for visibility */
+    
+  }
+  
+  .button__content div {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    filter: blur(12px);
+  }
+  
+  /* Gradient colors for each button shape */
+  .button__shape-1 {
+    background-color: var(--first-color); /* Black */
+    transform: translate(-48px, -16px);
+    animation: shape-1 6s 1s ease-out infinite;
+  }
+  
+  .button__shape-2 {
+    background-color: var(--second-color); /* Dark gray */
+    transform: translate(-12px, 16px);
+    animation: shape-2 6s ease-in infinite;
+  }
+  
+  .button__shape-3 {
+    background-color: var(--third-color); /* Medium gray */
+    transform: translate(20px, -16px);
+    animation: shape-3 6s ease-out infinite;
+  }
+  
+  .button__shape-4 {
+    background-color: var(--fourth-color); /* Light gray */
+    transform: translate(48px, 16px);
+    animation: shape-4 6s 1s ease-in infinite;
+  }
+  
+  .button__shadow {
+    width: 80%;
+    height: 1rem;
+    background: linear-gradient(80deg, #000, #fff); /* Black to white gradient */
+    border-radius: 4rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -2px;
+    z-index: -1;
+    filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .button:hover .button__shadow {
+    opacity: 1;
+  }
+  
+  /* Animate shapes */
+  @keyframes shape-1 {
+    33% {
+      transform: translate(-28px, 0);
+    }
+  }
+  
+  @keyframes shape-2 {
+    33% {
+      transform: translate(-28px, 28px);
+    }
+  }
+  
+  @keyframes shape-3 {
+    33% {
+      transform: translate(20px, 4px);
+    }
+  }
+  
+  @keyframes shape-4 {
+    33% {
+      transform: translate(48px, 0);
+    }
+  }
+  
