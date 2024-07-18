@@ -7,10 +7,12 @@ function DisplayPage() {
     const [bookReview, setBookReview] = useState('');
     const [bookCover, setBookCover] = useState('');
 
+    const apiUrl = process.env.REACT_APP_API_URL; // Get API URL from environment variable
+
     const fetchBookData = async () => {
         try {
             // Fetch book data including review and cover
-            const response = await fetch('/api/books', {
+            const response = await fetch(`${apiUrl}/api/books`, { // Use API URL from environment variable
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
