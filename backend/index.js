@@ -6,6 +6,14 @@ import Book from './models/bookmodel.js';
 import { PORT, mongodburl, googleAPIKey } from './config.js';
 
 const app = express();
+const express = require('express');
+const cors = require('cors');
+
+
+app.use(cors({
+    origin: 'https://katha-kritique.vercel.app' // Your frontend URL
+}));
+
 app.use(express.json()); // Middleware
 
 mongoose.connect(mongodburl) 
