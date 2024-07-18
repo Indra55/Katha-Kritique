@@ -1,14 +1,12 @@
-import express from "express";
-import mongoose from "mongoose";
+import express from 'express';
+import mongoose from 'mongoose';
 import axios from 'axios';
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import Book from './models/bookmodel.js';
 import { PORT, mongodburl, googleAPIKey } from './config.js';
+import cors from 'cors';
 
 const app = express();
-const express = require('express');
-const cors = require('cors');
-
 
 app.use(cors({
     origin: 'https://katha-kritique.vercel.app' // Your frontend URL
@@ -16,13 +14,13 @@ app.use(cors({
 
 app.use(express.json()); // Middleware
 
-mongoose.connect(mongodburl) 
+mongoose.connect(mongodburl)
   .then(() => {
     console.log("Connected to MongoDB");
     app.listen(PORT, () => {
       console.log(`App is listening on port: ${PORT}`);
-    }); 
-  }) 
+    });
+  })
   .catch((error) => {
     console.error('Database connection error:', error);
   });
@@ -92,11 +90,11 @@ app.post('/api/books', async (req, res) => {
 
     // Send the response with the saved book data
     res.status(201).json({ ...newBook.toObject(), cover });
- 
+
   } catch (error) {
-    console.error('Error processing request:', error); 
+    console.error('Error processing request:', error);
     res.status(500).json({ error: 'Failed to fetch review and save book' });
-  } 
+  }
 });
 
 // GET endpoint for testing purposes
