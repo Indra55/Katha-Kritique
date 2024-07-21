@@ -5,7 +5,7 @@ import Menu from './components/menu';
 import './App.css';
 import Page1 from './page1';
 import Page2 from './page2'; 
-import DisplayPage from './DisplayPage';// Import Page2 component
+import DisplayPage from './DisplayPage';
 
 function Home() {
     return (
@@ -32,7 +32,7 @@ function App() {
                    
                 <Route path="/page2/:title" element={<Page2 />} />
                 <Route path="/DisplayPage/:title/:wordCount" element={<DisplayPage />} />
-                    {/* Add more routes as needed */}
+                    {}
                 </Routes>
             </div>
         </Router>
