@@ -9,10 +9,10 @@ import cors from 'cors';
 const app = express();
 
 app.use(cors({
-    origin: 'https://katha-kritique.vercel.app' // Your frontend URL
+    origin: 'https://katha-kritique.vercel.app' 
 }));
 
-app.use(express.json()); // Middleware
+app.use(express.json()); 
 
 mongoose.connect(mongodburl)
   .then(() => {
@@ -25,7 +25,7 @@ mongoose.connect(mongodburl)
     console.error('Database connection error:', error);
   });
 
-// Initialize GoogleGenerativeAI with your API key
+
 const genAI = new GoogleGenerativeAI(googleAPIKey);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -60,14 +60,14 @@ const fetchBookCover = async (title) => {
   }
 };
 
-// POST endpoint to add a new book and fetch its review and cover
+
 app.post('/api/books', async (req, res) => {
   const { title, wordCount } = req.body;
 
   try {
     console.log(`Received request to add book: ${title}, wordCount: ${wordCount}`);
 
-    // Fetch book cover and review concurrently
+    
     let [cover, reviewData] = await Promise.all([
       fetchBookCover(title).catch(err => {
         console.error('Error fetching book cover:', err);
@@ -79,7 +79,7 @@ app.post('/api/books', async (req, res) => {
       })
     ]);
 
-    // Ensure reviewData is defined and has review and actualWordCount
+    
     const { review, actualWordCount } = reviewData || { review: 'Review not available', actualWordCount: 0 };
 
     console.log('Saving book to MongoDB...');
@@ -88,7 +88,7 @@ app.post('/api/books', async (req, res) => {
 
     console.log('Book saved successfully:', newBook);
 
-    // Send the response with the saved book data
+    
     res.status(201).json({ ...newBook.toObject(), cover });
 
   } catch (error) {
@@ -97,7 +97,7 @@ app.post('/api/books', async (req, res) => {
   }
 });
 
-// GET endpoint for testing purposes
+
 app.get('/', (req, res) => {
   res.send('Server is running.');
 });
