@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import Quote from './components/quotes.js'; // Import the Quote component
+import Quote from './components/quotes.js'; 
 import './page2.css';
 
 const Page2 = () => {
     const navigate = useNavigate();
-    const { title } = useParams(); // Retrieve title from URL params
+    const { title } = useParams();  
     const [selectedWordCount, setSelectedWordCount] = useState(0);
 
     const handleButtonClick = (wordCount) => {
@@ -54,7 +54,7 @@ const Page2 = () => {
                     </div>
                 </div>
             </div>
-            <Quote /> {/* Render the Quote component here */}
+            <Quote /> { }
         </div>
     );
 }
