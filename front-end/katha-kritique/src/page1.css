@@ -2,7 +2,7 @@ body {
     background-image: url('./assets/images/pagebg1.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center -150px; /* Adjust this value to move the background image up or down */
+    background-position: center -150px;  
     margin: 0;
   }
   
@@ -10,34 +10,34 @@ body {
     font-family: "Lora", serif;
     font-weight: 100;
     font-style: normal;
-    opacity: 0.9; /* Adjust opacity for visibility */
-    color: #333; /* Dark color for text */
+    opacity: 0.9;  
+    color: #333;  
     height: 100px;
     padding: 10px;
     font-size: 55px;
     border: none;
-    border-radius: 10px; /* Rounded corners for a softer look */
-    background-color: #FFFDEB; /* Background color blending with main background */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Glow effect */
+    border-radius: 10px; 
+    background-color: #FFFDEB;  
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); 
     transition: box-shadow 0.3s ease, transform 0.2s ease;
-    width: 460px; /* Fixed width */
-    margin: 0 auto; /* Center horizontally using margin */
-    display: block; /* Ensures it behaves as a block element */
+    width: 460px; 
+    margin: 0 auto;  
+    display: block;  
     text-align: center;
-    margin-top: 100px; /* Center text horizontally */
+    margin-top: 100px; 
 }
 
 #myInput:focus {
-    outline: none; /* Remove outline on focus for a cleaner look */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Increase glow on focus */
-    transform: translateY(2px); /* Slight lift effect on focus */
+    outline: none;  
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);  
+    transform: translateY(2px);  
 }
 
 .page1-button {
     position: relative;
-    width: 80px; /* Adjust width and height to make the button circular */
+    width: 80px; 
     height: 80px;
-    border-radius: 50%; /* Makes the button circular */
+    border-radius: 50%; 
     border: none;
     background-image: url(./arrow_forward_24dp_FILL0_wght400_GRAD0_opsz24.png);
     background-color: grey;
@@ -45,36 +45,35 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    outline: none; /* Remove default outline */
-    margin-top: 20px; /* Adjust margin to separate from input */
-    overflow: hidden; /* Hide overflow to keep animation contained */
+    outline: none; 
+    margin-top: 20px;  
+    overflow: hidden;  
 }
 
 .page1-button::before {
     content: '';
     position: absolute;
-    top: -2px; /* Adjust position to align with button border */
-    left: -2px; /* Adjust position to align with button border */
-    width: calc(100% + 4px); /* Extend width to cover the button */
-    height: calc(100% + 4px); /* Extend height to cover the button */
-    border-top: 2px solid white; /* Initial border style */
-    border-right: 2px solid white; /* Initial border style */
+    top: -2px;  
+    left: -2px;  
+    width: calc(100% + 4px); 
+    height: calc(100% + 4px);  
+    border-top: 2px solid white;  
+    border-right: 2px solid white; 
     opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
-    transform-origin: center; /* Center the transform origin */
-}
+    transition: opacity 0.3s ease; 
+    transform-origin: center;  
 
 .page1-button:hover::before {
-    opacity: 1; /* Show border on hover */
-    animation: animateBorder 3s linear infinite alternate; /* Start animation on hover */
+    opacity: 1;  
+    animation: animateBorder 3s linear infinite alternate;  
 }
 
 @keyframes animateBorder {
     0% {
-        transform: rotate(0deg); /* Start rotation from 0 degrees */
+        transform: rotate(0deg);  
     }
     100% {
-        transform: rotate(360deg); /* Rotate full circle */
+        transform: rotate(360deg); 
     }
 }
 
