@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Quote from './components/quotes.js'; // Import the Quote component
+import Quote from './components/quotes.js';  
 import './page1.css';
 
 function Page1() {
@@ -23,7 +23,7 @@ function Page1() {
 
     const handleSubmit = () => {
         if (title.trim() !== '') {
-            navigate(`/page2/${title}`); // Navigate without encoding the title
+            navigate(`/page2/${title}`);  
         } else {
             console.warn('Please enter a valid book title.');
         }
@@ -42,7 +42,7 @@ function Page1() {
             <div className="button-container">
                 <button className="page1-button" onClick={handleButtonClick}></button>
             </div>
-            <Quote /> {/* Render the Quote component here */}
+            <Quote /> { }
         </div>
     );
 }
