@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './DisplayPage.css'; // Import your CSS file
+import './DisplayPage.css';  
 
 function DisplayPage() {
     const { title, wordCount } = useParams();
