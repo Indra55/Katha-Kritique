@@ -40,7 +40,10 @@ body, html {
   -o-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  top: -40px;  
 }
+
 
 .button-container {
   margin-top: 20px;
