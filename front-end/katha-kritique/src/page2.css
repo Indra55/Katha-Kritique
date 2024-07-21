@@ -2,28 +2,29 @@
     font-family: "Lora", serif;
     font-weight: 100;
     font-style: normal;
-    opacity: 0.9;  
+    opacity: 0.9; 
     color: #333;
     font-size: 45px;
     text-align: center;
     margin-top: 40px;
   }
   
-  
+
   :root {
-  
+    
     --first-color: #000; 
-    --second-color: #333;  
+    --second-color: #333; 
     --third-color: #666; 
     --fourth-color: #999; 
-    --button-color: linear-gradient(80deg, #000, #fff);  
-    --text-color: #fff;  
+    --button-color: linear-gradient(80deg, #000, #fff); 
+    --text-color: #fff; /* White text */
     --body-color: hsl(260, 24%, 6%);
     
-   
+
     --body-font: "Poppins", sans-serif;
     --normal-font-size: 1rem;
   }
+  
 
   * {
     box-sizing: border-box;
@@ -41,9 +42,9 @@
     text-decoration: none;
   }
   
-   
+
   .container {
-    display: inline-block;  
+    display: inline-block; 
     margin: 0 10px; 
   }
   
@@ -54,7 +55,7 @@
   .button__content {
     position: relative;
     background: var(--button-color); 
-    padding: 20px 40px; 
+    padding: 20px 40px;
     border-radius: 4rem;
     color: var(--text-color);
     font-weight: 600;
@@ -83,26 +84,27 @@
     filter: blur(12px);
   }
   
-  
-    background-color: var(--first-color);  
+ 
+  .button__shape-1 {
+    background-color: var(--first-color);
     transform: translate(-48px, -16px);
     animation: shape-1 6s 1s ease-out infinite;
   }
   
   .button__shape-2 {
-    background-color: var(--second-color);  
+    background-color: var(--second-color);
     transform: translate(-12px, 16px);
     animation: shape-2 6s ease-in infinite;
   }
   
   .button__shape-3 {
-    background-color: var(--third-color);  
+    background-color: var(--third-color);
     transform: translate(20px, -16px);
     animation: shape-3 6s ease-out infinite;
   }
   
   .button__shape-4 {
-    background-color: var(--fourth-color);  
+    background-color: var(--fourth-color); 
     transform: translate(48px, 16px);
     animation: shape-4 6s 1s ease-in infinite;
   }
@@ -110,7 +112,7 @@
   .button__shadow {
     width: 80%;
     height: 1rem;
-    background: linear-gradient(80deg, #000, #fff);  
+    background: linear-gradient(80deg, #000, #fff); 
     border-radius: 4rem;
     position: absolute;
     left: 0;
@@ -127,7 +129,7 @@
     opacity: 1;
   }
   
-  
+   
   @keyframes shape-1 {
     33% {
       transform: translate(-28px, 0);
