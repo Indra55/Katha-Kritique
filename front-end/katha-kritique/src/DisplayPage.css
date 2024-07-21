@@ -45,39 +45,39 @@
     font-size: 32px;
     line-height: 2;
     padding: 20px;
-    max-height: 400px; /* Example max height */
-    overflow-y: auto; /* Enable vertical scrollbar */
+    max-height: 400px;  
+    overflow-y: auto; 
 
-    /* Styling the scrollbar */
-    scrollbar-width: thin; /* Width of the scrollbar */
-    scrollbar-color: #ccc #f0f0f0; /* Color of the scrollbar (track and thumb) */
+     
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc #f0f0f0;  
 
-    /* Optional: Specific styling for WebKit browsers (like Chrome/Safari) */
-    scrollbar-track-color: #f0f0f0; /* Track color */
+    
+    scrollbar-track-color: #f0f0f0;  
     
 }
 
-/* For Firefox */
+ 
 .book-review::-webkit-scrollbar {
     width: 10px;
 }
 
 .book-review::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Track color */
+    background: #f0f0f0;  
 }
 
 .book-review::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Thumb color */
-    border-radius: 5px; /* Rounded corners for the thumb */
+    background-color: #ccc; 
+    border-radius: 5px; 
 }
 
-/* For Edge and IE */
+ 
 .book-review {
-    -ms-overflow-style: none; /* Hide the scrollbar in Edge and IE */
+    -ms-overflow-style: none;  
 }
 
 .book-review::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in WebKit (Chrome/Safari) */
+    display: none;  
 }
 
 
