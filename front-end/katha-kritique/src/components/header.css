@@ -1,9 +1,9 @@
-/* Header.css */
+ 
 
 header {
     background-color: #FFFDEB;
     overflow: hidden;
-    padding: 20px 0; /* Add padding to give space around the content */
+    padding: 20px 0; 
 }
 
 nav {
@@ -16,7 +16,7 @@ nav {
     font-family: "Josefin Slab", serif;
     font-weight: 500;
     color: #D4BE99;
-    font-size: 75px; /* Maintain the original font size */
+    font-size: 75px; 
     text-decoration: none;
    
 }
