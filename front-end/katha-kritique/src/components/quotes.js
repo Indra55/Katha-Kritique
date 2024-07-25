@@ -6,26 +6,27 @@ const Quote = () => {
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
     useEffect(() => {
-        fetchRandomQuotes(); 
-        const interval = setInterval(fetchRandomQuotes, 10000); 
-        return () => clearInterval(interval); 
-    }, []);
-
-    const fetchRandomQuotes = () => {
-        fetch('https://api.quotable.io/quotes/random?limit=50') 
-            .then(response => response.json())
-            .then(data => {
+        const fetchRandomQuotes = async () => {
+            try {
+                const response = await fetch('https://api.quotable.io/quotes/random?limit=50');
+                const data = await response.json();
                 setQuotes(data);
                 setCurrentQuoteIndex(0);
-            })
-            .catch(error => console.error('Error fetching quotes:', error));
-    };
+            } catch (error) {
+                console.error('Error fetching quotes:', error);
+            }
+        };
+
+        fetchRandomQuotes();
+        const fetchInterval = setInterval(fetchRandomQuotes, 10000);
+        return () => clearInterval(fetchInterval);
+    }, []);
 
     useEffect(() => {
-        const interval = setInterval(() => {
+        const quoteChangeInterval = setInterval(() => {
             setCurrentQuoteIndex(prevIndex => (prevIndex + 1) % quotes.length);
-        }, 10000); 
-        return () => clearInterval(interval); 
+        }, 10000);
+        return () => clearInterval(quoteChangeInterval);
     }, [quotes]);
 
     return (
