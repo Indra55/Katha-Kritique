@@ -7,7 +7,7 @@ function DisplayPage() {
     const [bookReview, setBookReview] = useState('');
     const [bookCover, setBookCover] = useState('');
 
-    const apiUrl = process.env.REACT_APP_API_URL;  
+    const apiUrl = 'https://autoestimatr.onrender.com/';  
 
     const fetchBookData = async () => {
         try {
