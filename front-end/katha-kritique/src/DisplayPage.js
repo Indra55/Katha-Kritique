@@ -7,7 +7,7 @@ function DisplayPage() {
     const [bookReview, setBookReview] = useState('');
     const [bookCover, setBookCover] = useState('');
 
-    const apiUrl = 'https://autoestimatr.onrender.com/';  
+    const apiUrl = 'https://katha-kritique.onrender.com';  
 
     const fetchBookData = async () => {
         try {
