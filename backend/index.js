@@ -8,8 +8,9 @@ import cors from 'cors';
 
 const app = express();
 
+ 
 app.use(cors({
-    origin: 'https://katha-kritique.vercel.app' 
+    origin: 'https://katha-kritique.vercel.app'  
 }));
 
 app.use(express.json()); 
@@ -30,7 +31,7 @@ const genAI = new GoogleGenerativeAI(googleAPIKey);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const fetchBookReview = async (title, wordCount) => {
-  const prompt = `Provide a detailed review of the book titled "${title}" with approximately ${wordCount} words.`;
+  const prompt = `Craft a thorough and engaging review of the book titled "${title}". Aim for approximately ${wordCount} words, providing an analysis of key themes, character development, writing style, and overall impact. Highlight significant plot points without major spoilers and include personal insights or reflections to make the review more relatable and informative.`;
 
   try {
     console.log('Fetching review from Google AI...');
